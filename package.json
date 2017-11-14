@@ -1,0 +1,43 @@
+{
+  "name": "vue-oauth",
+  "description": "Google Keep clone in Node.js and Vue.js with Mongo backend",
+  "version": "1.0.0",
+  "author": "Henrik Fogelberg <henrik.gogelberg@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "dev": "npm run haiku_server | npm run haiku",
+    "server": "cross-env NODE_ENV=development nodemon server/server.js",
+    "vue": "cross-env NODE_ENV=development pm2 start webpack-dev-server  --name haiku -- --open --hot",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "bluebird": "^3.5.1",
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
+    "express": "^4.16.2",
+    "mongoose": "^4.13.2",
+    "morgan": "^1.9.0",
+    "vue": "^2.4.4",
+    "vue-router": "^3.0.1"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 8"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.0",
+    "babel-preset-stage-3": "^6.24.1",
+    "cross-env": "^5.0.5",
+    "css-loader": "^0.28.7",
+    "file-loader": "^1.1.4",
+    "vue-loader": "^13.0.5",
+    "vue-template-compiler": "^2.4.4",
+    "webpack": "^3.6.0",
+    "webpack-dev-server": "^2.9.1"
+  }
+}
