@@ -1,9 +1,9 @@
-# Vue Oauth
+# Zepp
 
-> Example of OAuth from scratch in Vue js
+> Google Keep Clone in Node/Vue
 
-## How to use
-1. Head over to the Google Cloud Platform API [console](https://console.cloud.google.com/apis/credentials). Create (or reuse) a project. Select Credentials in the menu and set up Oauth2 credentials. Authorize http://localhost:8080 as origin and set up http://localhost:8080/auth/google/callback as redirect origin. 
+## Config
+1. Register project and set up OATH at [console](https://console.cloud.google.com/apis/credentials). 
 2. Rename config.js.copy to config.js. Add the client id from the Google API
 3. npm run dev
 
