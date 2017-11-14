@@ -1,19 +1,3 @@
-<template>
-    <div>
-        <h2 style="text-align: center; font-size: 2.2em;">Callback</h2>
-
-        <hr/>
-        <p>Cookie: {{user.cookieVal}}</p>
-        <p>First name: {{user.firstName}}</p>
-        <p>Last Name: {{user.lastName}}</p>
-        <p>Email: {{user.username}}</p>
-        <p><img v-bind:src="user.photo" style="height: 200px;"></p>
-        <hr/>
-
-        <router-link to="/">Home</router-link>
-    </div>
-</template>
-
 <script>
     import axios from 'axios';
 
