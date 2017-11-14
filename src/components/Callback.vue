@@ -1,5 +1,8 @@
+<template></template>
+
 <script>
-    import axios from 'axios';
+    const {API_ROOT_URL} = require('../../config'),
+          axios = require('axios');
 
     export default {
         data() {
@@ -47,12 +50,15 @@
             },
 
             postUser() {
-                axios.post('http://locahost:3000/api/users',{
+                axios.post(API_ROOT_URL + 'users/', {
                     username: this.user.username,
                     token: this.user.cookieVal
                 })
                 .then((res) => {
                     console.log('Post OK. Response:', res);
+
+                    this.$store.dispatch('setUser', this.user);
+                    this.$router.push('/notes');
                 })
                 .catch((err) => {
                     console.log('Post error: ', err);
